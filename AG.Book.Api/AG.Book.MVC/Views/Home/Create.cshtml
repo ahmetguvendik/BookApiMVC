@@ -1,0 +1,22 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model AG.Book.MVC.Models.CreateBookModel
+
+<form asp-action="Create" asp-controller="Home" method="post">
+
+    <div>
+        <label>Kitap Adı</label>
+        <input type="text" asp-for=@Model.Name />
+    </div>
+
+    <div>
+        <label>Kitap Yazarı</label>
+        <input type="text" asp-for=@Model.Author />
+    </div>
+
+    <div>
+        <label>Kitap Sayfa Sayısı</label>
+        <input type="number" asp-for=@Model.Price />
+    </div>
+
+    <button>Kaydet</button>
+</form>

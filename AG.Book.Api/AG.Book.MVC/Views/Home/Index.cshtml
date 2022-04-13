@@ -1,0 +1,32 @@
+﻿@model List<AG.Book.MVC.Models.BookResponseModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<table>
+    <tr>
+
+        <th>İsim</th>
+        <th>Yazar</th>
+        <th>Tarih</th>
+        <th>Fiyat</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <th>@item.Name</th>
+            <th>@item.Author</th>
+            <th>@item.Created</th>
+            <th>@item.Price</th>
+            <th><a asp-action="Update" asp-controller="Home" asp-route-id=@item.Id>Güncelle</a></th>
+            <th><a asp-action="Remove" asp-controller="Home" asp-route-id=@item.Id>Sil</a></th>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create" asp-controller="Home">Kitap Ekleme</a>
+
+
+

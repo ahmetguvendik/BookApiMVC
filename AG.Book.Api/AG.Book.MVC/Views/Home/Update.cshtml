@@ -1,0 +1,22 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model AG.Book.MVC.Models.UpdateBookModel
+
+<form asp-action="Update" asp-controller="Home" method="post">
+    <input type="hidden" asp-for=@Model.Id />
+    <div>
+        <label>Kitap Adı</label>
+        <input type="text" asp-for=@Model.Name />
+    </div>
+
+    <div>
+        <label>Kitap Yazarı</label>
+        <input type="text" asp-for=@Model.Author />
+    </div>
+
+    <div>
+        <label>Kitap Fiyatı</label>
+        <input type="number" asp-for=@Model.Price />
+    </div>
+
+    <button>Güncelle</button>
+</form>
